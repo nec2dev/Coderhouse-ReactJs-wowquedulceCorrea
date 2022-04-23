@@ -1,7 +1,7 @@
 const NavBar = () => {
   return (
     <nav className="bg-gray-400">
-        <div className="container flex">
+        <div class="container flex mx-auto">
             <div className="px-8 py-4 bg-primary flex items-center cursor-pointer relative group">
                 <span className="text-white">
                     <i className="fas fa-bars"></i>

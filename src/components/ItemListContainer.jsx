@@ -1,6 +1,6 @@
-const ItemListContainer=(props)=>{
+const ItemListContainer = ( {greeting} ) => {
     return (
-        <h1>Hello!</h1>
-    ); 
-}
-export default ItemListContainer;
+      <div class="container flex mx-auto">Mi catálogo ahora no tiene productos, pero tiene un {greeting}</div>
+    )
+  }
+  export default ItemListContainer

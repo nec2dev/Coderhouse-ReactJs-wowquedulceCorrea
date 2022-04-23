@@ -1,16 +1,19 @@
-import './App.css';
-import Header from './components/Header';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import "./App.css";
+import Header from "./components/Header";
+import NavBar from "./components/NavBar";
+import Saludo from './components/Saludo';
+import ItemListContainer from "./components/ItemListContainer";
 function App() {
+  const myGreeting = () => {}
   return (
     <>
-    <div className="App">
+      <div className="App">
         <Header />
         <NavBar />
-        <ItemListContainer />
-        <h1>Hola mundo! estoy usando React</h1>
-    </div>
+        <ItemListContainer greeting="Saludo"></ItemListContainer>
+        <Saludo name="Mayra" age="40" action={myGreeting} />
+        {/* <Saludo name="Nahuel" age="42" /> */}
+      </div>
     </>
   );
 }
