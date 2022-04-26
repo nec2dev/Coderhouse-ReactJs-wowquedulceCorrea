@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <Header />
         <NavBar />
-        <ItemListContainer greeting="Saludo"></ItemListContainer>
+        <ItemListContainer greeting="Saludo" />
         <Saludo name="Mayra" age="40" action={myGreeting} />
         {/* <Saludo name="Nahuel" age="42" /> */}
       </div>
