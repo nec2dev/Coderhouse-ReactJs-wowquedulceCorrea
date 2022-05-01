@@ -1,12 +1,12 @@
+import * as React from "react";
 import CartWidget from "./CartWidget";
+import HeadLogo from "./Headlogo";
 
 const Header = () => {
     return (
         <header className="py-4 shadow-sm bg-white0 content-center">
-        <div class="container flex items-center justify-between mx-auto">
-            <a href="index.html">
-                <img class="w-32"  src="logo.svg" alt="logo wow que dulce" />
-            </a>
+        <div className="container flex items-center justify-between mx-auto">
+                <HeadLogo />
             <div className="w-full max-w-xl relative flex">
                 <span className="absolute left-4 top-3 text-lg text-gray-400">
                     <i className="fas fa-search"></i>
