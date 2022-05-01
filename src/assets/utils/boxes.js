@@ -4,7 +4,7 @@ export const boxes = [
       nombre: "Wow! Box001",
       precio: 560.0,
       precioAnterior: 620.0,
-      imagen: "../../assets/img/box1.jpg",
+      imagen: "../img/box001.jpg",
       medidas: "15 x 15 x 10 cm",
       peso: 3.2,
       personas: 4,

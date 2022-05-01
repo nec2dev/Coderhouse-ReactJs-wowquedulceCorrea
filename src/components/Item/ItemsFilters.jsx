@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 
-const Filters = () => {
+const ItemsFilters = () => {
   return (
     <>
       <div className="col-span-1 bg-white px-4 pb-6 shadow rounded overflow-hidden">
@@ -321,4 +321,4 @@ const Filters = () => {
   );
 };
 
-export default Filters;
+export default ItemsFilters;

@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 
-const BoxBarNav = () => {
+const Breadcrumb = () => {
   return (
     <>
       <div className="container py-4 flex items-center">
@@ -16,4 +16,4 @@ const BoxBarNav = () => {
   );
 };
 
-export default BoxBarNav;
+export default Breadcrumb;
