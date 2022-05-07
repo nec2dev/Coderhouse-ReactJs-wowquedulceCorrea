@@ -37,12 +37,12 @@ const NavBar = () => {
             </div>
             <div className="flex items-center justify-between flex-grow pl-12">
                 <div className="flex items-center space-x-6 capitalize">
-                    <a href="index.html" className="text-gray-200 hover:text-white transmition">Home</a>
-                    <a href="./pages/tienda.html" className="text-gray-200 hover:text-white transmition">Tienda</a>
-                    <a href="./pages/underConstruction.html" className="text-gray-200 hover:text-white transmition">Nosotros</a>
-                    <a href="./pages/underConstruction.html" className="text-gray-200 hover:text-white transmition">Contactos</a>
+                    <a href="./home" className="text-gray-200 hover:text-white transmition">Home</a>
+                    <a href="./tienda" className="text-gray-200 hover:text-white transmition">Tienda</a>
+                    <a href="./nosotros" className="text-gray-200 hover:text-white transmition">Nosotros</a>
+                    <a href="./contactos" className="text-gray-200 hover:text-white transmition">Contactos</a>
                 </div>
-                <a href="./pages/login.html" className="text-gray-200 hover:text-white transmition">Loguearse/Registrarse</a>
+                <a href="./login" className="text-gray-200 hover:text-white transmition">Loguearse/Registrarse</a>
             </div>
         </div>
     </nav>

@@ -20,7 +20,7 @@ const Header = () => {
                 </button>
             </div>
             <div className="flex items-center space-x-4">
-                <a href="./pages/whishlist.html" className="text-center text-gray-700 hover:text-primary transition relative">
+                <a href="./whishlist" className="text-center text-gray-700 hover:text-primary transition relative">
                     <div className="text-2xl">
                         <i className="far fa-heart"></i>
                     </div>
@@ -29,7 +29,7 @@ const Header = () => {
                         className="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">0</span>
                 </a>
                 <CartWidget />
-                <a href="./pages/login.html" className="text-center text-gray-700 hover:text-primary transition relative">
+                <a href="./login" className="text-center text-gray-700 hover:text-primary transition relative">
                     <div className="text-2xl">
                         <i className="far fa-user"></i>
                     </div>

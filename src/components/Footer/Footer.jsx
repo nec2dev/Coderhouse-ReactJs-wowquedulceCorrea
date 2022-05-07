@@ -60,17 +60,21 @@ const Header = () => {
               </div>
             </form>
           </div>
-          <div className="mb-6">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi voluptate quas.</p>
+          <div className="mb-6"> 
+          <div className="inline-flex items-baseline gap-12">
+            <p><a href="#!" className="fa fa-phone-square-alt"></a> +54 11 2 642 0901 </p>
+            <p><a href="#!" className="fa fa-paper-plane"></a> wowquedulce@gmail.com</p>
+            <p><a href="#!" className="fa fa-map-marked-alt"></a>  Buenos Aires, 1440 Mataderos, CABA.</p>
+          </div>
           </div>
           <div className="grid lg:grid-cols-4 md:grid-cols-2">
             <div className="mb-6">
               <h5 className="font-bold mb-2.5">Links</h5>
               <ul className="list-none mb-0">
-                <li><a href="#!" className="text-white">Home</a></li>
-                <li><a href="#!" className="text-white">Tienda</a></li>
-                <li><a href="#!" className="text-white">Nosotros</a></li>
-                <li><a href="#!" className="text-white">Contactos</a></li>
+                <li><a href="./home" className="text-white">Home</a></li>
+                <li><a href="./tienda" className="text-white">Tienda</a></li>
+                <li><a href="./nosotros" className="text-white">Nosotros</a></li>
+                <li><a href="./contactos" className="text-white">Contactos</a></li>
               </ul>
             </div>
             <div className="mb-6">
@@ -89,15 +93,12 @@ const Header = () => {
                 <li><i className="fab fa-youtube mx-4"></i><i className="fab fa-twitch mx-4"></i></li>
               </ul>
             </div>
-            <div className="mb-6">
-              <ul className="list-none mb-0 content-start">
-                <li><p> Seguí a la plataforma más dulce</p></li>
-                <li><p>y no te pierdas de nada</p></li>
+            <div className="mb-6 text-left text-sm">
+              <p> Seguí a la plataforma más dulce</p>
+              <p>y no te pierdas de nada</p>
+              <ul className="list-none">
                 <li><a href="https://www.apple.com/app-store/"><img src={Appstore} alt="appstore logo"/></a></li>
-                <li><a href="https://play.google.com/store"><img src={Googleplay} alt="google play logo"/></a></li>
-                <li>+54 11 2 642 0901</li>
-                <li>wowquedulce@gmail.com</li>
-                <li>Buenos Aires, 1440 Mataderos, CABA.</li>                
+                <li><a href="https://play.google.com/store"><img src={Googleplay} alt="google play logo"/></a></li>             
               </ul>
             </div>
           </div>
