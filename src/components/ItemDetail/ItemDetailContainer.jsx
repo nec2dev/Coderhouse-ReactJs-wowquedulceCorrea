@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { getBoxes } from "../../assets/utils/getBoxes";
-import ItemsFilters from "./ItemsFilters";
-import ItemList from "./ItemList";
+import { getBox } from "../../assets/utils/getBox";
+import ItemDetail from "./ItemDetail";
 import LoadingSpinner from "./LoadingSpinner";
 
-const ItemListContainer = () => {
-  const [boxes, setBoxes] = useState([]);
+const ItemDetailContainer = () => {
+  const [box, setBox] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setIsLoading(true)
-    getBoxes()
-      .then((result) => setBoxes(result))
+    getBox()
+      .then((result) => setBox(result))
       .catch((error) => console.log(error))
       .finally(() => setIsLoading(false));
   }, []);
@@ -18,11 +17,10 @@ const ItemListContainer = () => {
   return (
     <>
       <div className="container grid grid-cols-4 gap-6 pt-4 pb-16 items-center">
-        <ItemsFilters />
-        {isLoading ? <LoadingSpinner /> :  <ItemList boxes={boxes}/>}
+        {isLoading ? <LoadingSpinner /> :  <ItemDetail box={box}/>}
       </div>
     </>
   );
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;

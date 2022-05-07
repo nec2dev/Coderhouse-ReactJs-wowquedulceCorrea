@@ -17,7 +17,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="boxdulce001"
+                  htmlFor="boxdulce001"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Box dulce 01
@@ -31,7 +31,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="boxdulce002"
+                  htmlFor="boxdulce002"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Box dulce 02
@@ -45,7 +45,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="boxdulce003"
+                  htmlFor="boxdulce003"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Box dulce 03
@@ -59,7 +59,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="boxdulce004"
+                  htmlFor="boxdulce004"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Box dulce 04
@@ -73,7 +73,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="boxdulce005"
+                  htmlFor="boxdulce005"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Box dulce 05
@@ -87,7 +87,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="boxdulce006"
+                  htmlFor="boxdulce006"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Box dulce 06
@@ -108,7 +108,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="alfajores"
+                  htmlFor="alfajores"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Alfajores
@@ -122,7 +122,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="lemonpie"
+                  htmlFor="lemonpie"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Lemon Pie
@@ -136,7 +136,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="brownie"
+                  htmlFor="brownie"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Brownie
@@ -150,7 +150,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="cheesescon"
+                  htmlFor="cheesescon"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Scon de queso
@@ -164,7 +164,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="conito"
+                  htmlFor="conito"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Conito DDL
@@ -178,7 +178,7 @@ const ItemsFilters = () => {
                   className="text-primary focus:ring-0 rounded-sm cursor-pointer"
                 />
                 <label
-                  for="cinamonroll"
+                  htmlFor="cinamonroll"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Roll de canela
@@ -218,7 +218,7 @@ const ItemsFilters = () => {
                   id="people-1"
                 />
                 <label
-                  for="people-1"
+                  htmlFor="people-1"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600"
                 >
                   1
@@ -232,7 +232,7 @@ const ItemsFilters = () => {
                   id="people-2"
                 />
                 <label
-                  for="people-2"
+                  htmlFor="people-2"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600"
                 >
                   2
@@ -246,7 +246,7 @@ const ItemsFilters = () => {
                   id="people-3"
                 />
                 <label
-                  for="people-3"
+                  htmlFor="people-3"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600"
                 >
                   3
@@ -260,7 +260,7 @@ const ItemsFilters = () => {
                   id="people-5"
                 />
                 <label
-                  for="people-5"
+                  htmlFor="people-5"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600"
                 >
                   5
@@ -274,7 +274,7 @@ const ItemsFilters = () => {
                   id="people-10"
                 />
                 <label
-                  for="people-10"
+                  htmlFor="people-10"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600"
                 >
                   10
@@ -288,7 +288,7 @@ const ItemsFilters = () => {
                   id="people-20"
                 />
                 <label
-                  for="people-20"
+                  htmlFor="people-20"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600"
                 >
                   20
@@ -309,7 +309,7 @@ const ItemsFilters = () => {
                   id="sabor-frutilla"
                 />
                 <label
-                  for="sabor-frutilla"
+                  htmlFor="sabor-frutilla"
                   className="border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm"
                 ></label>
               </div>

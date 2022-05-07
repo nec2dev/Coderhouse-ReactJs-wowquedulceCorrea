@@ -1,10 +1,17 @@
+import Box001 from'../../assets/img/box001.jpg';
+import Box002 from'../../assets/img/box002.jpg';
+import Box003 from'../../assets/img/box003.jpg';
+import Box004 from'../../assets/img/box004.jpg';
+import Box005 from'../../assets/img/box005.jpg';
+import Box006 from'../../assets/img/box006.jpg';
+
 export const boxes = [
     {
       id:1,
       nombre: "Wow! Box001",
       precio: 560.0,
       precioAnterior: 620.0,
-      imagen: "../img/box001.jpg",
+      imagen: Box001,
       medidas: "15 x 15 x 10 cm",
       peso: 3.2,
       personas: 4,
@@ -35,7 +42,7 @@ export const boxes = [
       nombre: "Wow! Box002",
       precio: 940.5,
       precioAnterior: 1020.0,
-      imagen: "../../assets/img/box002.jpg",
+      imagen: Box002,
       medidas: "15 x 15 x 10 cm",
       peso: 3.2,
       personas: 4,
@@ -66,7 +73,7 @@ export const boxes = [
       nombre: "Wow! Box003",
       precio: 320.0,
       precioAnterior: 420.0,
-      imagen: "../../assets/img/box003.jpg",
+      imagen: Box003,
       medidas: "15 x 15 x 10 cm",
       peso: 3.2,
       personas: 4,
@@ -97,7 +104,7 @@ export const boxes = [
       nombre: "Wow! Box004",
       precio: 450.0,
       precioAnterior: 620.0,
-      imagen: "../../assets/img/box004.jpg",
+      imagen: Box004,
       medidas: "15 x 15 x 10 cm",
       peso: 3.2,
       personas: 4,
@@ -128,7 +135,7 @@ export const boxes = [
       nombre: "Wow! Box005",
       precio: 500.0,
       precioAnterior: 620.0,
-      imagen: "../../assets/img/box005.jpg",
+      imagen: Box005,
       medidas: "15 x 15 x 10 cm",
       peso: 3.2,
       personas: 4,
@@ -159,7 +166,7 @@ export const boxes = [
       nombre: "Wow! Box006",
       precio: 1028.0,
       precioAnterior: 1320.0,
-      imagen: "../../assets/img/box006.jpg",
+      imagen: Box006,
       medidas: "15 x 15 x 10 cm",
       peso: 3.2,
       personas: 4,

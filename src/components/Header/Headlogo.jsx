@@ -1,5 +1,5 @@
-import Logo from "../../assets/img/logo.png";
 import React from "react";
+import Logo from "../../assets/img/logo.png";
 
 export default function HeadLogo() {
   return (

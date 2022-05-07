@@ -5,7 +5,7 @@ const LoadingSpinner = ({ boxes }) => {
     <>
       <svg
         role="status"
-        class="inline w-100 h-100 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-pink-600"
+        className="text-gray-200 animate-spin dark:text-gray-600 fill-red-400"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
