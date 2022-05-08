@@ -15,25 +15,23 @@ import Footer from "../components/Footer/Footer";
 
 const AppRoutes = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <NavBar />
-        <Breadcrumb />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/tienda" element={<Tienda />} />
-          <Route path="/carrito" element={<Carrito />} />
-          <Route path="/whishlist" element={<WishList />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/contactos" element={<Contactos />} />
-          <Route path="/box/:id" element={<Box />} />
-          <Route path="*" element={<NotFound404 />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Header />
+      <NavBar />
+      <Breadcrumb />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/tienda" element={<Tienda />} />
+        <Route path="/carrito" element={<Carrito />} />
+        <Route path="/whishlist" element={<WishList />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/contactos" element={<Contactos />} />
+        <Route path="/box/:id" element={<Box />} />
+        <Route path="*" element={<NotFound404 />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 };
 

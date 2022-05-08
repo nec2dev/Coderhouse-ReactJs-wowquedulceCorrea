@@ -4,7 +4,7 @@ import ItemListContainer from "../components/Item/ItemListContainer";
 const Tienda = () => {
   return (
     <main>
-      <div className="App">
+      <div className="">
         <ItemListContainer/>
       </div>
     </main>

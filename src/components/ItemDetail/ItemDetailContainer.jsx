@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getBox } from "../../assets/utils/getBox";
 import ItemDetail from "./ItemDetail";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "../Item/LoadingSpinner";
 
 const ItemDetailContainer = () => {
   const [box, setBox] = useState([]);
@@ -15,12 +15,10 @@ const ItemDetailContainer = () => {
   }, []);
 
   return (
-    <>
-      <div className="container grid grid-cols-4 gap-6 pt-4 pb-16 items-center">
-        {isLoading ? <LoadingSpinner /> :  <ItemDetail box={box}/>}
-      </div>
-    </>
-  );
+    <div>
+      {isLoading ? <LoadingSpinner /> :  <ItemDetail box={box}/>}
+    </div>
+  )
 };
 
 export default ItemDetailContainer;

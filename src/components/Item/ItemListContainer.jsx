@@ -17,7 +17,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div className="container grid grid-cols-4 gap-6 pt-4 pb-16 items-center">
+      <div className="container grid grid-cols-4 gap-6 pt-4 pb-16">
         <ItemsFilters />
         {isLoading ? <LoadingSpinner /> :  <ItemList boxes={boxes}/>}
       </div>

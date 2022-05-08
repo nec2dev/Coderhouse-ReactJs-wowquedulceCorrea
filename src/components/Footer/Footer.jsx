@@ -64,7 +64,7 @@ const Header = () => {
           <div className="inline-flex items-baseline gap-12">
             <p><a href="#!" className="fa fa-phone-square-alt"></a> +54 11 2 642 0901 </p>
             <p><a href="#!" className="fa fa-paper-plane"></a> wowquedulce@gmail.com</p>
-            <p><a href="#!" className="fa fa-map-marked-alt"></a>  Buenos Aires, 1440 Mataderos, CABA.</p>
+            <p><a href="#!" className="fa fa-map-marked-alt"></a> Buenos Aires, 1440 Mataderos, CABA.</p>
           </div>
           </div>
           <div className="grid lg:grid-cols-4 md:grid-cols-2">

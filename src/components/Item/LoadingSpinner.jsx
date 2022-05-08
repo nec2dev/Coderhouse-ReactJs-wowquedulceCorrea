@@ -1,8 +1,8 @@
 import React from "react";
 
-const LoadingSpinner = ({ boxes }) => {
+const LoadingSpinner = () => {
   return (
-    <>
+    <div className="grid place-items-center h-screen">
       <svg
         role="status"
         className="text-gray-200 animate-spin dark:text-gray-600 fill-red-400"
@@ -19,7 +19,7 @@ const LoadingSpinner = ({ boxes }) => {
           fill="currentFill"
         />
       </svg>
-    </>
+    </div>
   );
 };
 
