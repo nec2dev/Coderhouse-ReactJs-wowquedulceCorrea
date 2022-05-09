@@ -9,25 +9,25 @@ import WishList from "../pages/WhishList";
 import LogIn from "../pages/LogIn";
 import Nosotros from "../pages/Us";
 import Contactos from "../pages/Contacts";
-import Box from "../pages/Box";
+import BoxDetail from "../pages/BoxDetail";
 import NotFound404 from "../pages/Error404";
 import Footer from "../components/Footer/Footer";
 
-const AppRoutes = () => {
+const AppRouter = () => {
   return (
     <BrowserRouter>
       <Header />
       <NavBar />
       <Breadcrumb />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/tienda" element={<Tienda />} />
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/whishlist" element={<WishList />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contactos" element={<Contactos />} />
-        <Route path="/box/:id" element={<Box />} />
+        <Route path="/box/:id" element={<BoxDetail />} />
         <Route path="*" element={<NotFound404 />} />
       </Routes>
       <Footer />
@@ -35,4 +35,4 @@ const AppRoutes = () => {
   );
 };
 
-export default AppRoutes;
+export default AppRouter;

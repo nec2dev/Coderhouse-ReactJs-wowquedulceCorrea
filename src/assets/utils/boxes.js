@@ -46,7 +46,7 @@ export const boxes = [
       medidas: "15 x 15 x 10 cm",
       peso: 3.2,
       personas: 4,
-      numpiezas: 8,
+      numpiezas: 10,
       piezas: [
         "Brownie",
         "Lemon Pie",
@@ -75,9 +75,9 @@ export const boxes = [
       precioAnterior: 420.0,
       imagen: Box003,
       medidas: "15 x 15 x 10 cm",
-      peso: 3.2,
+      peso: 3.9,
       personas: 4,
-      numpiezas: 8,
+      numpiezas: 6,
       piezas: [
         "Brownie",
         "Lemon Pie",
@@ -106,9 +106,9 @@ export const boxes = [
       precioAnterior: 620.0,
       imagen: Box004,
       medidas: "15 x 15 x 10 cm",
-      peso: 3.2,
-      personas: 4,
-      numpiezas: 8,
+      peso: 5.2,
+      personas: 7,
+      numpiezas: 22,
       piezas: [
         "Brownie",
         "Lemon Pie",
