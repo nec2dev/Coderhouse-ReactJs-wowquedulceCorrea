@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "../components/Header/Header";
 import NavBar from "../components/NavBar/NavBar";
-import Breadcrumb from "../components/NavBar/Breadcrumb";
 import Home from "../pages/Home";
 import Tienda from "../pages/Tienda";
 import Carrito from "../pages/CheckOut";
@@ -18,7 +17,6 @@ const AppRouter = () => {
     <BrowserRouter>
       <Header />
       <NavBar />
-      <Breadcrumb />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tienda" element={<Tienda />} />

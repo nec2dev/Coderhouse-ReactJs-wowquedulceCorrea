@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Breadcrumb from "../components/NavBar/Breadcrumb";
 
 const Contacts = () => {
   return (
     <main>
-      <h1>Contactos</h1>
-      <div>Contacts</div>
+      <Breadcrumb />
+      <h1 className='text-center uppercase text-primary text-2xl'>Contactos</h1>
+      <div className='text-center'>Contacts</div>
     </main>
   )
 }

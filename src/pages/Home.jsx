@@ -1,11 +1,15 @@
 import React from "react";
 // import Cover from '../assets/img/cover.png';
-// import Ad from'../../assets/img/box002.jpg';
+import Baker from '../assets/img/bakerGirl.png';
+import Delivery from '../assets/img/delivery.png';
+import Amasado from '../assets/img/amasado.png';
+import Ads from '../assets/img/ads.jpg';
 
 const Home = () => {
   return (
     <main>
-      <div className="bg-cover bg-no-repeat bg-center py-36" style={{ backgroundImage: 'url("../assets/img/cover.png")' }}>
+      <div className="bg-slate-300 py-36">
+        {/* <img src={Cover} alt="" srcSet="" /> */}
         <div className="container">
           <h1 className="text-6xl text-white font-medium mb-4 capitalize" id="titulo">
             Título ecommerce
@@ -24,21 +28,21 @@ const Home = () => {
       <div className="container py-16">
         <div className="w-10/12 grid grid-cols-3 gap-6 mx-auto justify-center">
           <div className="border border-primary rounded-lg px-3 py-6 flex justify-center items-center gap-5">
-            <img src="./assets/img/delivery.svg" className="w-12 h-12 object-contain" alt="" srcSet />
+            <img src={Baker} className="w-12 h-12 object-contain" alt="" />
             <div>
-              <h4 className="font-medium capitalize text-lg">Envíos</h4>
-              <p className="text-gray-500 text-sm">compras de +$600</p>
+              <h4 className="font-medium capitalize text-lg">Recetas</h4>
+              <p className="text-gray-500 text-sm">tutoriales completos</p>
             </div>
           </div>
           <div className="border border-primary rounded-lg px-3 py-6 flex justify-center items-center gap-5">
-            <img src="./assets/img/delivery.svg" className="w-12 h-12 object-contain" alt="" srcSet />
+            <img src={Amasado} className="w-12 h-12 object-contain" alt="" />
             <div>
-              <h4 className="font-medium capitalize text-lg">Envíos</h4>
-              <p className="text-gray-500 text-sm">compras de +$600</p>
+              <h4 className="font-medium capitalize text-lg">Materiales</h4>
+              <p className="text-gray-500 text-sm">calidad y amor</p>
             </div>
           </div>
           <div className="border border-primary rounded-lg px-3 py-6 flex justify-center items-center gap-5">
-            <img src="./assets/img/delivery.svg" className="w-12 h-12 object-contain" alt="" srcSet />
+            <img src={Delivery} className="w-12 h-12 object-contain" alt="" />
             <div>
               <h4 className="font-medium capitalize text-lg">Envíos</h4>
               <p className="text-gray-500 text-sm">compras de +$600</p>
@@ -85,7 +89,7 @@ const Home = () => {
       {/* Sección de Ads */}
       <div className="container pb-16">
         <a href="./pages/underConstruction.html">
-          <img src="./assets/img/BannerAds.jpg" className="w-full" alt="" />
+          <img src={Ads} className="w-full" alt="" />
         </a>
       </div>
     </main>
