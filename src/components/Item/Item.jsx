@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-const Item = ({ box }) => {
-  const { imagen, nombre, id, precio, precioAnterior, medidas, numpiezas, peso } = box;
+const Item = ({ product }) => {
+  const { imagen, nombre, id, precio, precioAnterior, medidas, numpiezas, peso } = product;
   return (
     <div className="bg-white shadow rounded-lg overflow-hidden group p-1 ">
       <div className="relative">
-        <img src={imagen} alt={box.nombre} className="rounded-lg w-full" />
+        <img src={imagen} alt={product.nombre} className="rounded-lg w-full" />
         <div className='absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition'>
           <i className='fas fa-heart text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-400 transition'></i>
-          <Link to={`/box/${id}`} className='fas fa-search text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-400 transition'>
+          <Link to={`/producto/${id}`} className='fas fa-search text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-400 transition'>
           </Link>
           <div className="uppercase font-medium text-xl text-center mb-2 text-gray-800 hover:text-primary transition">
           </div>

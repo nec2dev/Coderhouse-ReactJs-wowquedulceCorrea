@@ -1,18 +1,35 @@
-import React from "react";
-
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { products } from "../../assets/utils/products"
 import BoxDetail001 from '../../assets/img/Wow007-001.png';
 import BoxDetail002 from '../../assets/img/Wow007-002.png';
 import BoxDetail003 from '../../assets/img/Wow007-003.png';
 import BoxDetail004 from '../../assets/img/Wow007-004.png';
 import BoxDetail005 from '../../assets/img/Wow007-005.png';
 
-const ItemDetail = ({ box }) => {
-    const { imagen, nombre, precio, precioAnterior, medidas, numpiezas, peso } = box;
+const ItemDetail = () => {
+    const { idProduct } = useParams();
+    const [product, setProduct] = useState({});
+    useEffect(() => {
+        (async () => {
+            const products = await getProducts()
+            if (products) {
+                setProduct(products)
+            }
+          })()
+        }, [idProduct])
+        const getProducts = () => {
+            return new Promise( (resolve) => {
+              setTimeout(() => {
+                resolve( products.find( r => r.id == idProduct) )
+              }, 2000);
+            })
+          }
     return (
         <>
             <div className="container grid grid-cols-2 gap-6">
                 <div>
-                    <img src={imagen} className="w-full" alt={nombre} />
+                    <img src={product.imagen} className="w-full" alt={product.nombre} />
                     <div className="grid grid-cols-5 gap-4 mt-4">
                         <img src={BoxDetail001} className="w-full cursor-pointer border border-primary" alt="" />
                         <img src={BoxDetail002} className="w-full cursor-pointer border" alt="" />
@@ -22,7 +39,7 @@ const ItemDetail = ({ box }) => {
                     </div>
                 </div>
                 <div>
-                    <h2 className="text-3xl font-medium uppercase mb-2">{nombre}</h2>
+                    <h2 className="text-3xl font-medium uppercase mb-2">{product.nombre}</h2>
                     <div className="flex items-center mb-4">
                         <div className="flex gap-1 text-sm text-yellow-400">
                             <span><i className="fas fa-star"></i></span>
@@ -39,18 +56,18 @@ const ItemDetail = ({ box }) => {
                             <span className="text-green-600">hay Stock</span>
                         </p>
                         <p className="text-gray-800 font-semibold space-x-2">
-                            <span>Medidas: {medidas}</span>
+                            <span>Medidas: {product.medidas}</span>
                         </p>
                         <p className="text-gray-800 font-semibold space-x-2">
-                            <span>Piezas: {numpiezas} un.</span>
+                            <span>Piezas: {product.numpiezas} un.</span>
                         </p>
                         <div className="text-gray-800 font-semibold space-x-2">
-                            <div>Peso: {peso} Kg.</div>
+                            <div>Peso: {product.peso} Kg.</div>
                         </div>
                     </div>
                     <div className="flex items-baseline mb-1 space-x-2 font-roboto mt-4">
-                        <p className="text-2xl text-primary font-semibold">$ {precio}</p>
-                        <p className="text-base text-gray-400 line-through">$ {precioAnterior}</p>
+                        <p className="text-2xl text-primary font-semibold">$ {product.precio}</p>
+                        <p className="text-base text-gray-400 line-through">$ {product.precioAnterior}</p>
                     </div>
                     <p className="mt-4 text-gray-600">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut at asperiores non facilis repudiandae fuga
@@ -155,18 +172,18 @@ const ItemDetail = ({ box }) => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet ducimus iure? Placeat, qui! Vitae eaque quaerat commodi quidem vero numquam animi perspiciatis ut? Aut quis eveniet exercitationem sit aliquid.</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet ducimus iure? Placeat, qui! Vitae eaque quaerat commodi quidem vero numquam animi perspiciatis ut? Aut quis eveniet exercitationem sit aliquid.</p>
                         </div>
-                        <table classname="table-auto border-collapse w-full text-left text-gray-600 text-sm mt-6">
+                        <table className="table-auto border-collapse w-full text-left text-gray-600 text-sm mt-6">
                             <tbody><tr>
-                                <th classname="py-2 px-4 border border-gray-300 w-40 font-medium">Sabor</th>
-                                <td classname="py-2 px-4 border border-gray-300">Frutilla, Vainilla, Chocolate</td>
+                                <th className="py-2 px-4 border border-gray-300 w-40 font-medium">Sabor</th>
+                                <td className="py-2 px-4 border border-gray-300">Frutilla, Vainilla, Chocolate</td>
                             </tr>
                                 <tr>
-                                    <th classname="py-2 px-4 border border-gray-300 w-40 font-medium">Piezas</th>
-                                    <td classname="py-2 px-4 border border-gray-300">tartas, pie, alfajor, brownie</td>
+                                    <th className="py-2 px-4 border border-gray-300 w-40 font-medium">Piezas</th>
+                                    <td className="py-2 px-4 border border-gray-300">tartas, pie, alfajor, brownie</td>
                                 </tr>
                                 <tr>
-                                    <th classname="py-2 px-4 border border-gray-300 w-40 font-medium">Peso</th>
-                                    <td classname="py-2 px-4 border border-gray-300">2.8 Kg</td>
+                                    <th className="py-2 px-4 border border-gray-300 w-40 font-medium">Peso</th>
+                                    <td className="py-2 px-4 border border-gray-300">2.8 Kg</td>
                                 </tr>
                             </tbody></table>
                     </div>

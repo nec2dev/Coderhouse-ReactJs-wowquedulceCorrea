@@ -1,6 +1,7 @@
 import React from "react";
 import CartWidget from "./CartWidget";
 import HeadLogo from "./Headlogo";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -20,21 +21,21 @@ const Header = () => {
                 </button>
             </div>
             <div className="flex items-center space-x-4">
-                <a href="./whishlist" className="text-center text-gray-700 hover:text-primary transition relative">
+                <Link to="./listadedeseos" className="text-center text-gray-700 hover:text-primary transition relative">
                     <div className="text-2xl">
                         <i className="far fa-heart"></i>
                     </div>
                     <div className="text-xs leading-3">Lista Deseos</div>
                     <span
                         className="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">0</span>
-                </a>
+                </Link>
                 <CartWidget />
-                <a href="./login" className="text-center text-gray-700 hover:text-primary transition relative">
+                <Link to="./iniciarsesion" className="text-center text-gray-700 hover:text-primary transition relative">
                     <div className="text-2xl">
                         <i className="far fa-user"></i>
                     </div>
                     <div className="text-xs leading-3">Cuenta</div>
-                </a>
+                </Link>
             </div>
         </div>
     </header>

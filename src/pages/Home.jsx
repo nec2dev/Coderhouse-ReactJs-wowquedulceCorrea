@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import Cover from '../assets/img/cover.png';
 import Baker from '../assets/img/bakerGirl.png';
 import Delivery from '../assets/img/delivery.png';
@@ -19,8 +20,8 @@ const Home = () => {
             doloribus, consectetur assumenda illo repudiandae necessitatibus accusantium placeat, adipisci eligendi
             laborum ad molestiae commodi voluptatem id. Doloremque facilis molestiae nihil.</p>
           <div className="mt-12">
-            <a href="/tienda" className="bg-primary border border-primary text-white px-8 py-3 font-medium rounded-md hover:bg-transparent hover:text-primary transition">Comprar
-              Ahora</a>
+            <Link to="/tienda" className="bg-primary border border-primary text-white px-8 py-3 font-medium rounded-md hover:bg-transparent hover:text-primary transition">Comprar
+              Ahora</Link>
           </div>
         </div>
       </div>
@@ -56,41 +57,41 @@ const Home = () => {
         <div className="grid grid-cols-3 gap-3">
           <div className="relative rounded-lg overflow-hidden">
             <img src="./assets/img/BoxDulce001.jpg" className="w-full" alt="" />
-            <a href="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
-              Dulce 1</a>
+            <Link to="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
+              Dulce 1</Link>
           </div>
           <div className="relative rounded-lg overflow-hidden">
             <img src="./assets/img/BoxDulce002.jpg" className="w-full" alt="" />
-            <a href="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
-              Dulce 2</a>
+            <Link to="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
+              Dulce 2</Link>
           </div>
           <div className="relative rounded-lg overflow-hidden">
             <img src="./assets/img/BoxDulce003.png" className="w-full" alt="" />
-            <a href="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
-              Dulce 3</a>
+            <Link to="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
+              Dulce 3</Link>
           </div>
           <div className="relative rounded-lg overflow-hidden">
             <img src="./assets/img/BoxDulce004.jpg" className="w-full" alt="" />
-            <a href="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
-              Dulce 4</a>
+            <Link to="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
+              Dulce 4</Link>
           </div>
           <div className="relative rounded-lg overflow-hidden">
             <img src="./assets/img/BoxDulce005.jpg" className="w-full" alt="" />
-            <a href="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
-              Dulce 5</a>
+            <Link to="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
+              Dulce 5</Link>
           </div>
           <div className="relative rounded-lg overflow-hidden">
             <img src="./assets/img/BoxDulce006.jpg" className="w-full" alt="" />
-            <a href="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
-              Dulce 6</a>
+            <Link to="./pages/box.html" className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">Box
+              Dulce 6</Link>
           </div>
         </div>
       </div>
       {/* Sección de Ads */}
       <div className="container pb-16">
-        <a href="./pages/underConstruction.html">
+        <Link to="./pages/underConstruction.html">
           <img src={Ads} className="w-full" alt="" />
-        </a>
+        </Link>
       </div>
     </main>
   );

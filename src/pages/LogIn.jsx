@@ -1,8 +1,10 @@
 import React from 'react'
+import Breadcrumb from "../components/NavBar/Breadcrumb";
 
 const LogIn = () => {
   return (
     <main>
+      <Breadcrumb />
       <div className="container py-2">
         <div className="max-w-lg mx-auto shadow px-6 py-7 rounded overflow-hidden">
             <h2 className="text-2xl uppercase font-medium mb-1">login</h2>

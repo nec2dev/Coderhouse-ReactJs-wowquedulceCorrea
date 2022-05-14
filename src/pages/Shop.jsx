@@ -2,15 +2,13 @@ import React from "react";
 import ItemListContainer from "../components/Item/ItemListContainer";
 import Breadcrumb from "../components/NavBar/Breadcrumb";
 
-const Tienda = () => {
+const Shop = () => {
   return (
     <main>
-      <div className="">
-        <Breadcrumb />
-        <ItemListContainer/>
-      </div>
+      <Breadcrumb />
+      <ItemListContainer/>
     </main>
   );
 };
 
-export default Tienda;
+export default Shop;
