@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import { products } from "../../assets/utils/products"
+import React, { useEffect, useState, useContext } from 'react';
+import { useCartContext } from '../Context/CartContext';
+import ItemCount from '../Item/ItemCount';
+import { useParams } from 'react-router-dom';
+import { products } from '../../assets/utils/products';
 import BoxDetail001 from '../../assets/img/Wow007-001.png';
 import BoxDetail002 from '../../assets/img/Wow007-002.png';
 import BoxDetail003 from '../../assets/img/Wow007-003.png';
@@ -8,23 +10,28 @@ import BoxDetail004 from '../../assets/img/Wow007-004.png';
 import BoxDetail005 from '../../assets/img/Wow007-005.png';
 
 const ItemDetail = () => {
+    const { addToCart } = useCartContext();
     const { idProduct } = useParams();
     const [product, setProduct] = useState({});
+    function handleOnAdd(count) {
+        console.log(count);
+        addToCart(product, count);
+      }
     useEffect(() => {
         (async () => {
             const products = await getProducts()
             if (products) {
                 setProduct(products)
             }
-          })()
-        }, [idProduct])
-        const getProducts = () => {
-            return new Promise( (resolve) => {
-              setTimeout(() => {
-                resolve( products.find( r => r.id == idProduct) )
-              }, 2000);
-            })
-          }
+        })()
+    }, [idProduct])
+    const getProducts = () => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(products.find(r => r.id == idProduct))
+            }, 2000);
+        })
+    }
     return (
         <>
             <div className="container grid grid-cols-2 gap-6">
@@ -136,19 +143,7 @@ const ItemDetail = () => {
                     </div>
                     <div className="mt-4">
                         <h3 className="text-sm text-gray-800 uppercase mb-1">Cantidad</h3>
-                        <div className="flex border border-gray-300 text-gray-600 divide-x divide-gray-300 w-max">
-                            <div className="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">-</div>
-                            <div className="h-8 w-8 text-base flex items-center justify-center">4</div>
-                            <div className="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">+</div>
-                        </div>
-                    </div>
-                    <div className="flex gap-3 border-b border-gray-200 pb-5 mt-6">
-                        <a href="#!" className="bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition">
-                            <i className="fas fa-shopping-bag"></i>Agregar al Carrito
-                        </a>
-                        <a href="#!" className="border border-gray-300 text-gray-600 px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:text-primary transition">
-                            <i className="fas fa-heart"></i>A lista de Deseos
-                        </a>
+                        <ItemCount initial={1} stock={product.stock} onAdd={handleOnAdd} />
                     </div>
                     <div className="flex gap-3 mt-4">
                         <a href="#!" className="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">

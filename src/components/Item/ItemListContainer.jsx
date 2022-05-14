@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { getProducts } from "../../assets/utils/getProducts";
-import ItemsFilters from "./ItemsFilters";
-import ItemList from "./ItemList";
-import LoadingSpinner from "./LoadingSpinner";
+import React, { useEffect, useState } from 'react';
+import { getProducts } from '../../assets/utils/getProducts';
+import ItemList from './ItemList';
+import LoadingSpinner from './LoadingSpinner';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -17,10 +16,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div className="container grid grid-cols-4 gap-6 pt-4 pb-16">
-        <ItemsFilters />
-        {isLoading ? <LoadingSpinner /> :  <ItemList products={products}/>}
-      </div>
+      {isLoading ? <LoadingSpinner /> : <ItemList products={products} />}
     </>
   );
 };

@@ -9,6 +9,7 @@ export const products = [
     {
       id:1,
       categoria:1,
+      stock:10,
       nombre: "Wow! Box001",
       precio: 560.0,
       precioAnterior: 620.0,
@@ -41,6 +42,7 @@ export const products = [
     {
       id:2,
       categoria:1,
+      stock:10,
       nombre: "Wow! Box002",
       precio: 940.5,
       precioAnterior: 1020.0,
@@ -73,6 +75,7 @@ export const products = [
     {
       id:3,
       categoria:1,
+      stock:10,
       nombre: "Wow! Box003",
       precio: 320.0,
       precioAnterior: 420.0,
@@ -105,6 +108,7 @@ export const products = [
     {
       id:4,
       categoria:2,
+      stock:10,
       nombre: "Wow! Box004",
       precio: 450.0,
       precioAnterior: 620.0,
@@ -137,6 +141,7 @@ export const products = [
     {
       id:5,
       categoria:2,
+      stock:10,
       nombre: "Wow! Box005",
       precio: 500.0,
       precioAnterior: 620.0,
@@ -169,6 +174,7 @@ export const products = [
     {
       id:6,
       categoria:2,
+      stock:10,
       nombre: "Wow! Box006",
       precio: 1028.0,
       precioAnterior: 1320.0,

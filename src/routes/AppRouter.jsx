@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CartContextProvider from '../components/Context/CartContext';
 import Header from '../components/Header/Header';
 import NavBar from '../components/NavBar/NavBar';
 import Home from '../pages/Home';
@@ -16,13 +17,14 @@ import Footer from '../components/Footer/Footer';
 
 const AppRouter = () => {
   return (
+    <CartContextProvider>
       <BrowserRouter>
         <Header />
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/tienda" element={<Tienda />} />
-          <Route exact path="/compra" element={<Compra />}/>
+          <Route exact path="/compra" element={<Compra />} />
           <Route exact path="/carrito" element={<Carrito />} />
           <Route exact path="/listadedeseos" element={<Listadedeseos />} />
           <Route exact path="/iniciarsesion" element={<Iniciarsesion />} />
@@ -34,6 +36,7 @@ const AppRouter = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
+    </CartContextProvider>
   );
 };
 

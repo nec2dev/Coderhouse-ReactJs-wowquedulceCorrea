@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -11,14 +11,14 @@ const NavBar = () => {
                 <span className="capitalize ml-2 text-white">Todas las categorías</span>
                 <div
                     className="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
-                    <Link to="/categoria/1" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                    <NavLink to="/categoria/1" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <img src="" className="w-5 h-5 object-contain" alt=""/>
                         <span className="ml-6 text-gray-600 text-sm">Boxes</span>
-                    </Link>
-                    <Link to="/categoria/2" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                    </NavLink>
+                    <NavLink to="/categoria/2" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <img src="" className="w-5 h-5 object-contain" alt=""/>
                         <span className="ml-6 text-gray-600 text-sm">Eventos</span>
-                    </Link>
+                    </NavLink>
                     {/* <Link to="/" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <img src="" className="w-5 h-5 object-contain" alt=""/>
                         <span className="ml-6 text-gray-600 text-sm">Box 003</span>
