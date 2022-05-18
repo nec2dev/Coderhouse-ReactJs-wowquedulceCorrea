@@ -4,16 +4,17 @@ import Header from '../components/Header/Header';
 import NavBar from '../components/NavBar/NavBar';
 import Home from '../pages/Home';
 import Tienda from '../pages/Shop';
-import Carrito from '../pages/Cart';
+import Carrito from '../pages/ShopCart';
 import Compra from '../pages/CheckOut';
 import Listadedeseos from '../pages/WhishList';
 import Iniciarsesion from '../pages/LogIn';
 import Nosotros from '../pages/Us';
 import Contactos from '../pages/Contacts';
-import Producto from '../pages/Product';
-import Categoria from '../pages/Shop';
+// import Producto from '../pages/Product';
+import ItemListContainer from '../components/Item/ItemListContainer';
 import NotFound404 from '../pages/Error404';
 import Footer from '../components/Footer/Footer';
+import ItemDetailContainer from '../components/ItemDetail/ItemDetailContainer';
 
 const AppRouter = () => {
   return (
@@ -30,8 +31,8 @@ const AppRouter = () => {
           <Route exact path="/iniciarsesion" element={<Iniciarsesion />} />
           <Route exact path="/nosotros" element={<Nosotros />} />
           <Route exact path="/contactos" element={<Contactos />} />
-          <Route exact path="/producto/:idProduct" element={<Producto />} />
-          <Route exact path="/categoria/:idCategory" element={<Categoria />} />
+          <Route exact path="/producto/:idProduct" element={<ItemDetailContainer />} />
+          <Route exact path="/categoria/:idCategory" element={<ItemListContainer />} />
           <Route exact path="*" element={<NotFound404 />} />
         </Routes>
         <Footer />

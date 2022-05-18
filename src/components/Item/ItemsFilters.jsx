@@ -20,7 +20,7 @@ const ItemsFilters = () => {
                   htmlFor="boxdulce001"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
-                  Box dulce 01
+                  Boxes
                 </label>
                 <div className="ml-auto text-gray-600 text-sm">(15)</div>
               </div>
@@ -34,11 +34,11 @@ const ItemsFilters = () => {
                   htmlFor="boxdulce002"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
-                  Box dulce 02
+                  Eventos
                 </label>
                 <div className="ml-auto text-gray-600 text-sm">(15)</div>
               </div>
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <input
                   type="checkbox"
                   id="categoria003"
@@ -93,7 +93,7 @@ const ItemsFilters = () => {
                   Box dulce 06
                 </label>
                 <div className="ml-auto text-gray-600 text-sm">(15)</div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="pt-4">
@@ -296,7 +296,7 @@ const ItemsFilters = () => {
               </div>
             </div>
           </div>
-          <div className="pt-4">
+          {/* <div className="pt-4">
             <h3 className="text-xl text-gray-800 mb-3 uppercase font-medium">
               Sabor
             </h3>
@@ -314,7 +314,7 @@ const ItemsFilters = () => {
                 ></label>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

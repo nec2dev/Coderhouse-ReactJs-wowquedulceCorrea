@@ -1,26 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { getProducts } from "../../assets/utils/getProducts";
-import LoadingSpinner from "../Item/LoadingSpinner";
-import ItemDetail from "./ItemDetail";
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
+import ItemDetail from './ItemDetail'
+import LoadingSpinner from '../Item/LoadingSpinner';
 
-const ItemDetailContainer = () => {
-  const [product, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+function ItemDetailContainer() {
+  const { idProduct } = useParams()
+  const [loading, setLoading] = useState(true)
+  const [product, setProduct] = useState([])
   useEffect(() => {
-    setIsLoading(true)
-    getProducts()
-      .then((result) => setProducts(result))
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
-  }, []);
-
+    const db = getFirestore()
+    const queryDb = doc(db, 'items', idProduct)
+    getDoc(queryDb)
+      .then(resp => setProduct({ id: resp.id, ...resp.data() }))
+      .finally(() => setLoading(false))
+  }, [idProduct])
   return (
-    <>
-      <div>
-        {isLoading ? <LoadingSpinner /> :  <ItemDetail product={product}/>} 
-      </div>
-    </>
-  );
-};
+    <div>
+      {loading ? <LoadingSpinner /> : <ItemDetail product={product} />}
+    </div>
+  )
+}
 
-export default ItemDetailContainer;
+export default ItemDetailContainer

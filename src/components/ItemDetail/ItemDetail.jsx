@@ -1,42 +1,25 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { useCartContext } from '../Context/CartContext';
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import ItemCount from '../Item/ItemCount';
-import { useParams } from 'react-router-dom';
-import { products } from '../../assets/utils/products';
+import { CartContext } from '../Context/CartContext';
 import BoxDetail001 from '../../assets/img/Wow007-001.png';
 import BoxDetail002 from '../../assets/img/Wow007-002.png';
 import BoxDetail003 from '../../assets/img/Wow007-003.png';
 import BoxDetail004 from '../../assets/img/Wow007-004.png';
 import BoxDetail005 from '../../assets/img/Wow007-005.png';
 
-const ItemDetail = () => {
-    const { addToCart } = useCartContext();
-    const { idProduct } = useParams();
-    const [product, setProduct] = useState({});
-    function handleOnAdd(count) {
-        console.log(count);
-        addToCart(product, count);
-      }
-    useEffect(() => {
-        (async () => {
-            const products = await getProducts()
-            if (products) {
-                setProduct(products)
-            }
-        })()
-    }, [idProduct])
-    const getProducts = () => {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(products.find(r => r.id == idProduct))
-            }, 2000);
-        })
+const ItemDetail = ({ product }) => {
+    const [goToCart, setGoToCart] = useState(false)
+    const { addToCart } = useContext(CartContext)
+    const onAdd = (quantity) => {
+        setGoToCart(true)
+        addToCart({ ...product, quantity: quantity })
     }
     return (
         <>
-            <div className="container grid grid-cols-2 gap-6">
+            <div key={product.id} className="container grid grid-cols-2 gap-6">
                 <div>
-                    <img src={product.imagen} className="w-full" alt={product.nombre} />
+                    <img src={product.imagen} alt={product.nombre} className="w-full" />
                     <div className="grid grid-cols-5 gap-4 mt-4">
                         <img src={BoxDetail001} className="w-full cursor-pointer border border-primary" alt="" />
                         <img src={BoxDetail002} className="w-full cursor-pointer border" alt="" />
@@ -116,46 +99,47 @@ const ItemDetail = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="pt-4">
-                        <h3 className="text-xl text-gray-800 mb-3 uppercase font-medium">Sabor</h3>
-                        <div className="flex items-center gap-2">
-                            <div className="sabor-selector">
-                                <input type="radio" name="sabor" className="hidden" id="sabor-frutilla" />
-                                <label htmlFor="sabor-frutilla"
-                                    className="border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm"></label>
-                            </div>
-                            <div className="sabor-selector">
-                                <input type="radio" name="sabor" className="hidden" id="sabor-frutilla" />
-                                <label htmlFor="sabor-frutilla"
-                                    className="border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm"></label>
-                            </div>
-                            <div className="sabor-selector">
-                                <input type="radio" name="sabor" className="hidden" id="sabor-frutilla" />
-                                <label htmlFor="sabor-frutilla"
-                                    className="border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm"></label>
-                            </div>
-                            <div className="sabor-selector">
-                                <input type="radio" name="sabor" className="hidden" id="sabor-frutilla" />
-                                <label htmlFor="sabor-frutilla"
-                                    className="border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm"></label>
-                            </div>
-                        </div>
-                    </div>
                     <div className="mt-4">
                         <h3 className="text-sm text-gray-800 uppercase mb-1">Cantidad</h3>
-                        <ItemCount initial={1} stock={product.stock} onAdd={handleOnAdd} />
+                        {!goToCart ? <ItemCount initial={1} stock={product.stock} onAdd={onAdd} /> :
+                            <div className="d-flex justify-content-center">
+                                <Link to={`/carrito`}>
+                                    <button className="btn btn-danger bg-gradient me-3 mt-3">Ir al carrito</button>
+                                </Link>
+                                <Link to={`/`}>
+                                    <button className="btn btn-danger bg-gradient ms-3 mt-3">Seguir comprando</button>
+                                </Link>
+                            </div>
+                        }
+                    </div>
+                    <div className="flex gap-3 pb-1">
+                        <Link to="/listadedeseos" className="border border-gray-300 text-gray-600 px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:text-primary transition">
+                            <i className="fas fa-heart"></i>
+                        </Link>
+                        <Link to="/carrito" className="bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition">
+                            <i className="fas fa-shopping-cart"></i>Carrito
+                        </Link>
+                    </div>
+                    <div className="flex gap-3 pb-1">
+                        <Link to="/tienda" className="bg-terciary border border-terciary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-gray-600 transition">
+                            <i className="fa-solid fa-basket-shopping"></i>Seguir comprando
+                        </Link>
+                    </div>
+                    {/* <div className="mt-4">
+                        <h3 className="text-sm text-gray-800 uppercase mb-1">Cantidad</h3>
+                        <ItemCount initial={1} stock={product.stock} onAdd={onAdd} />
                     </div>
                     <div className="flex gap-3 mt-4">
-                        <a href="#!" className="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
+                        <Link to="#!" className="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
                             <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#!" className="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
+                        </Link>
+                        <Link to="#!" className="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
                             <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href="#!" className="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
+                        </Link>
+                        <Link to="#!" className="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
                             <i className="fab fa-instagram"></i>
-                        </a>
-                    </div>
+                        </Link>
+                    </div> */}
                 </div>
             </div>
             <div>
@@ -185,7 +169,7 @@ const ItemDetail = () => {
                 </div>
             </div>
         </>
-    );
+    )
 };
 
 export default ItemDetail;

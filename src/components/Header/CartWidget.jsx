@@ -1,6 +1,9 @@
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
+import { CartContext } from '../Context/CartContext';
 
 const CartWidget = () => {
+  const { totalQuantity } = useContext(CartContext)
   return (
     <button
       href="./login"
@@ -11,7 +14,7 @@ const CartWidget = () => {
       </div>
       <div className="text-xs leading-3">Carrito</div>
       <span className="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
-        0
+      {totalQuantity()}
       </span>
     </button>
   );

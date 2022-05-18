@@ -1,4 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
+import Box from '../../assets/img/box.png';
+import Event from '../../assets/img/eventos.png';
 
 const NavBar = () => {
   return (
@@ -12,11 +14,11 @@ const NavBar = () => {
                 <div
                     className="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
                     <NavLink to="/categoria/1" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                        <img src="" className="w-5 h-5 object-contain" alt=""/>
+                        <img src={Box} className="w-5 h-5 object-contain" alt=""/>
                         <span className="ml-6 text-gray-600 text-sm">Boxes</span>
                     </NavLink>
                     <NavLink to="/categoria/2" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                        <img src="" className="w-5 h-5 object-contain" alt=""/>
+                        <img src={Event} className="w-5 h-5 object-contain" alt=""/>
                         <span className="ml-6 text-gray-600 text-sm">Eventos</span>
                     </NavLink>
                     {/* <Link to="/" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
