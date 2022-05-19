@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Error404 = () => {
   return (
     <main>
@@ -20,5 +18,4 @@ const Error404 = () => {
     </main>
   )
 }
-
 export default Error404

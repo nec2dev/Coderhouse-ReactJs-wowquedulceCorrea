@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../Context/CartContext';
+import { CartContext } from '../Cart/CartContext';
 
 const WishList = () => {
     const { wishList, wishCounter, removeItemWishList, emptyWishList, totalBuy } = useContext(CartContext)
@@ -22,7 +22,7 @@ const WishList = () => {
                 <h3><b>Precio Total:</b></h3>
                 <h4><b>${totalBuy()}</b></h4>
                 <div>
-                    <button onClick={emptyWishList}>Vaciar Carrito</button>
+                    <button onClick={emptyWishList}>Vaciar Lista de Deseos</button>
                     <Link to="/carrito">
                         <button>Que tus deseos se hagan realidad!</button>
                     </Link>

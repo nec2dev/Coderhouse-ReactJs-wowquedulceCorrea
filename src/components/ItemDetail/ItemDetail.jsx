@@ -1,14 +1,14 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../Cart/CartContext';
 import ItemCount from '../Item/ItemCount';
-import { CartContext } from '../Context/CartContext';
 import BoxDetail001 from '../../assets/img/Wow007-001.png';
 import BoxDetail002 from '../../assets/img/Wow007-002.png';
 import BoxDetail003 from '../../assets/img/Wow007-003.png';
 import BoxDetail004 from '../../assets/img/Wow007-004.png';
 import BoxDetail005 from '../../assets/img/Wow007-005.png';
 
-const ItemDetail = ({ product }) => {
+function ItemDetail({ product }) {
     const [goToCart, setGoToCart] = useState(false)
     const { addToCart } = useContext(CartContext)
     const onAdd = (quantity) => {
@@ -19,7 +19,7 @@ const ItemDetail = ({ product }) => {
         <>
             <div key={product.id} className="container grid grid-cols-2 gap-6">
                 <div>
-                    <img src={product.imagen} alt={product.nombre} className="w-full" />
+                    <img src={product.imagen} alt={product.nombre} className="w-full mt-3" />
                     <div className="grid grid-cols-5 gap-4 mt-4">
                         <img src={BoxDetail001} className="w-full cursor-pointer border border-primary" alt="" />
                         <img src={BoxDetail002} className="w-full cursor-pointer border" alt="" />
@@ -169,7 +169,6 @@ const ItemDetail = ({ product }) => {
                 </div>
             </div>
         </>
-    )
+    );
 };
-
 export default ItemDetail;

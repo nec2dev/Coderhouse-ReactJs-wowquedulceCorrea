@@ -1,13 +1,13 @@
-import React, {useContext} from 'react';
+// import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../Context/CartContext';
+// import { WishContext } from '../Context/WishContext';
 import WishList from './WishList';
 
 function Wish() {
-    const { wishtList } = useContext(CartContext)
+    // const { WishList } = useContext(WishContext)
     return (
         <>
-            {wishtList.length === 0? 
+            {WishList.length === 0? 
                 <div>
                     <div>
                         <h3><strong>No hay productos en tu caja de deseos</strong></h3>

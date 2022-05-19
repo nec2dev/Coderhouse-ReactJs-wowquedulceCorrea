@@ -1,14 +1,10 @@
-import React from "react";
-import Cart from "../components/Cart/Cart";
-import Breadcrumb from "../components/NavBar/Breadcrumb";
+import Cart from '../components/Cart/Cart';
 
 const ShopCart = () => {
   return (
     <main>
-      <Breadcrumb />
       <Cart />
     </main>
   );
 };
-
 export default ShopCart;

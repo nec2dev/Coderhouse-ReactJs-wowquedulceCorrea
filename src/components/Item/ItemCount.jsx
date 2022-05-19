@@ -23,8 +23,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
             <div className="flex gap-3 pb-1 mt-6">
                 <Link to="/tienda" onClick={() => onAdd(count)} className="bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition">
                     <i className="fas fa-shopping-bag"></i>Agregar al carrito
-                </Link>
-                
+                </Link>       
             </div>
         </div >
     );

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 const Breadcrumb = () => {
   const { id } = useParams();
   return (
-    <div className="container py-4 flex items-center">
+    <div className="container py-1 bg-white flex items-center">
       <a href="/" className="text-primary text-base">
         <i className="fas fa-home"></i>
       </a>
@@ -15,5 +15,4 @@ const Breadcrumb = () => {
     </div>
   );
 };
-
 export default Breadcrumb;

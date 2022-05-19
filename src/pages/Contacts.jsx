@@ -1,14 +1,10 @@
-import React from 'react';
-import Breadcrumb from "../components/NavBar/Breadcrumb";
+import ContactForm from '../components/Forms/ContactForm';
 
 const Contacts = () => {
   return (
     <main>
-      <Breadcrumb />
-      <h1 className='text-center uppercase text-primary text-2xl'>Contactos</h1>
-      <div className='text-center'>Contacts</div>
+      <ContactForm />
     </main>
   )
 }
-
 export default Contacts

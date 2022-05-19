@@ -1,14 +1,10 @@
-import React from "react";
-import ItemListContainer from "../components/Item/ItemListContainer";
-import Breadcrumb from "../components/NavBar/Breadcrumb";
+import ItemListContainer from '../components/Item/ItemListContainer';
 
 const Shop = () => {
   return (
     <main>
-      <Breadcrumb />
       <ItemListContainer/>
     </main>
   );
 };
-
 export default Shop;

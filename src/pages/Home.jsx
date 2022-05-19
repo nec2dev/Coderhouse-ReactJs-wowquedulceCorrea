@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 // import Cover from '../assets/img/cover.png';
 import Baker from '../assets/img/bakerGirl.png';
 import Delivery from '../assets/img/delivery.png';
@@ -96,5 +95,4 @@ const Home = () => {
     </main>
   );
 }
-
 export default Home;
