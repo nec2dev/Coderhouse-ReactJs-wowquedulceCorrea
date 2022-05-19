@@ -53,6 +53,9 @@ function Item({ prod }) {
           <h3 className="text-sm text-gray-800 uppercase mb-1">Cantidad</h3>
           {!goToCart ? <ItemCount initial={1} stock={prod.stock} onAdd={onAdd} /> :
             <div>
+              <Link to="/carrito" className="bg-green-400 border border-green-400 text-white px-8 py-2 mb-3 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-green-400 transition">
+                Agregado, Gracias!
+              </Link>
               <Link to="/carrito" className="bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition">
                 <i className="fas fa-shopping-cart"></i>Ir al Carrito
               </Link>

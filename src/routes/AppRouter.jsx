@@ -6,7 +6,7 @@ import Home from '../pages/Home';
 import Tienda from '../pages/Shop';
 import Carrito from '../pages/ShopCart';
 import Compra from '../pages/CheckOut';
-import Listadedeseos from '../pages/WhishList';
+import Listadedeseos from '../pages/WishBox';
 import Iniciarsesion from '../pages/LogIn';
 import Nosotros from '../pages/Us';
 import Contactos from '../pages/Contacts';
