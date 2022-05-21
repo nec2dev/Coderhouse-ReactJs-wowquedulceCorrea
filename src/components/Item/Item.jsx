@@ -3,12 +3,6 @@ import { Link } from 'react-router-dom';
 import ItemCount from '../Item/ItemCount';
 import { CartContext } from '../Cart/CartContext';
 // import { WishContext } from '../Context/WishContext';
-// import Box001 from'../../assets/img/box001.jpg';
-// import Box002 from'../../assets/img/box002.jpg';
-// import Box003 from'../../assets/img/box003.jpg';
-// import Box004 from'../../assets/img/box004.jpg';
-// import Box005 from'../../assets/img/box005.jpg';
-// import Box006 from'../../assets/img/box006.jpg';
 
 function Item({ prod }) {
   const [goToCart, setGoToCart] = useState(false)

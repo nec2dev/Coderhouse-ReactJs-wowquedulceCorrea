@@ -6,7 +6,7 @@ import ItemsFilters from './ItemsFilters';
 const ItemList = memo(({ products }) => {
   return (
     <>
-      <div className="container grid grid-cols-4 gap-6 pt-4 pb-16">
+      <div className="container grid grid-cols-4 gap-6 pt-4 pb-16 bg-gray-100">
         <ItemsFilters />
         <div className="col-span-3">
           <BoxNavBar />

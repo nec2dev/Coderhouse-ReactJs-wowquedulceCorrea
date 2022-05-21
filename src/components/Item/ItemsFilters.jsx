@@ -3,7 +3,7 @@ import React from 'react';
 const ItemsFilters = () => {
   return (
     <>
-      <div className="col-span-1 bg-white px-4 pb-6 shadow rounded overflow-hidden">
+      <div className="col-span-1 bg-white px-4 pb-6 shadow rounded-lg overflow-hidden items-start">
         <div className="divide-y divide-gray-200 space-y-5">
           <div className="pt-4">
             <h3 className="text-xl text-gray-800 mb-3 uppercase font-medium">

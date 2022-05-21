@@ -17,7 +17,7 @@ function ItemDetail({ product }) {
     }
     return (
         <>
-            <div key={product.id} className="container grid grid-cols-2 gap-6">
+            <div key={product.id} className="container grid grid-cols-2 gap-6 bg-gray-100">
                 <div>
                     <img src={product.imagen} alt={product.nombre} className="w-full mt-3" />
                     <div className="grid grid-cols-5 gap-4 mt-4">
@@ -143,7 +143,7 @@ function ItemDetail({ product }) {
                 </div>
             </div>
             <div>
-                <div className="container pb-16 w-full">
+                <div className="container pb-16 w-full bg-gray-100">
                     <h3 className="border-b border-gray-200 font-roboto text-gray-800 pb-3 font-medium">Detalles de la Box</h3>
                     <div className="w-3/5 pt-6">
                         <div className="text-gray-600 space-y-3">

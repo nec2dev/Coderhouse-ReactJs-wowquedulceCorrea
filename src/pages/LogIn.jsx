@@ -2,7 +2,7 @@ import LogInForm from '../components/Forms/LogInForm';
 
 const LogIn = () => {
   return (
-    <main>
+    <main className="bg-gray-100">
       <LogInForm />
     </main>
   )
