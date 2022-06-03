@@ -1,4 +1,5 @@
-import CheckOutForm from '../components/Forms/CheckOutForm';
+import React from 'react'
+import CheckOutForm from '../components/Forms/CheckOutForm'
 
 const CheckOut = () => {
   return (
@@ -6,5 +7,6 @@ const CheckOut = () => {
       <CheckOutForm />
     </main>
   )
-};
+}
+
 export default CheckOut;

@@ -1,8 +1,9 @@
-import {useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
-import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
-import ItemList from './ItemList';
-import LoadingSpinner from './LoadingSpinner';
+import React from 'react'
+import {useState, useEffect} from 'react'
+import { useParams } from 'react-router-dom'
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
+import ItemList from './ItemList'
+import LoadingSpinner from '../Animations/LoadingSpinner'
 
 
 function ItemListContainer() {
@@ -25,9 +26,9 @@ function ItemListContainer() {
 
   return (
     <>
-      {isLoading ? <LoadingSpinner /> : <ItemList products={products} />}
+      {isLoading ? <LoadingSpinner className="container flex mx-auto"/> : <ItemList products={products} />}
     </>
-  );
-};
+  )
+}
 
-export default ItemListContainer;
+export default ItemListContainer

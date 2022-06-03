@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-const BoxNavBar = () => {
+const NavBarBox = () => {
   return (
     <div className="flex gap-2 ml-auto">
       <select
@@ -21,7 +21,7 @@ const BoxNavBar = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BoxNavBar;
+export default NavBarBox

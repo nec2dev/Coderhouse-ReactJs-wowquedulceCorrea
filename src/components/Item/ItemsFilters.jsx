@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ItemsFilters = () => {
   return (
@@ -38,7 +38,7 @@ const ItemsFilters = () => {
                 </label>
                 <div className="ml-auto text-gray-600 text-sm">(15)</div>
               </div>
-              {/* <div className="flex items-center">
+              <div className="flex items-center">
                 <input
                   type="checkbox"
                   id="categoria003"
@@ -93,7 +93,7 @@ const ItemsFilters = () => {
                   Box dulce 06
                 </label>
                 <div className="ml-auto text-gray-600 text-sm">(15)</div>
-              </div> */}
+              </div> 
             </div>
           </div>
           <div className="pt-4">
@@ -296,29 +296,10 @@ const ItemsFilters = () => {
               </div>
             </div>
           </div>
-          {/* <div className="pt-4">
-            <h3 className="text-xl text-gray-800 mb-3 uppercase font-medium">
-              Sabor
-            </h3>
-            <div className="flex items-center gap-2">
-              <div className="sabor-selector">
-                <input
-                  type="radio"
-                  name="sabor"
-                  className="hidden"
-                  id="sabor-frutilla"
-                />
-                <label
-                  htmlFor="sabor-frutilla"
-                  className="border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm"
-                ></label>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ItemsFilters;
+export default ItemsFilters

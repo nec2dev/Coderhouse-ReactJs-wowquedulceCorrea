@@ -1,4 +1,5 @@
-import Wish from '../components/Wish/Wish';
+import React from 'react'
+import Wish from '../components/Wish/Wish'
 
 const WishBox = () => {
   return (
@@ -6,5 +7,6 @@ const WishBox = () => {
       <Wish />
     </main>
   )
-};
-export default WishBox;
+}
+
+export default WishBox

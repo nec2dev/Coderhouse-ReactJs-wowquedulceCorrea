@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { CartContext } from './CartContext';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { CartContext } from './CartContext'
 
 const CartList = () => {
     const { cartList, cartCounter, totalBuy, removeItem, emptyCart } = useContext(CartContext)
@@ -21,7 +21,7 @@ const CartList = () => {
                                 <h3 className="font-semibold text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
                             </div>
                             {cartList.map(prod =>
-                                <div className="flex items-center hover:bg-gray-100 my-4 px-2 py-2 border border-gray-200 rounded-lg">
+                                <div key="{prod}"className="flex items-center hover:bg-gray-100 my-4 px-2 py-2 border border-gray-200 rounded-lg">
                                     <div className="flex w-2/5">
                                         <div className="w-full">
                                             <img src={prod.imagen} alt={prod.nombre} className="h-40 rounded-lg" />
@@ -63,4 +63,5 @@ const CartList = () => {
         </>
     )
 }
+
 export default CartList

@@ -1,7 +1,8 @@
-import CartWidget from "./CartWidget";
-import HeadLogo from "./Headlogo";
-import { Link } from "react-router-dom";
-import WishWidget from "./WishWidget";
+import React from 'react'
+import CartWidget from "./CartWidget"
+import HeadLogo from "./Headlogo"
+import { Link } from "react-router-dom"
+import WishWidget from "./WishWidget"
 
 const Header = () => {
     return (
@@ -32,6 +33,7 @@ const Header = () => {
                 </div>
             </div>
         </header>
-    );
-};
-export default Header;
+    )
+}
+
+export default Header

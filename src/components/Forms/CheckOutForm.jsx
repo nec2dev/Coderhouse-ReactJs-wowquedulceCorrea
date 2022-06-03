@@ -1,8 +1,9 @@
-import { useState, useContext } from 'react';
-import { getFirestore, collection, writeBatch, addDoc, Timestamp, doc } from 'firebase/firestore';
-import { CartContext } from '../Cart/CartContext';
-import { Link } from 'react-router-dom';
-import LoadingSpinner from '../Item/LoadingSpinner';
+import React from 'react'
+import { useState, useContext } from 'react'
+import { getFirestore, collection, writeBatch, addDoc, Timestamp, doc } from 'firebase/firestore'
+import { CartContext } from '../Cart/CartContext'
+import { Link } from 'react-router-dom'
+import LoadingSpinner from '../Animations/LoadingSpinner'
 
 const CheckOutForm = () => {
   const [orderId, setOrderId] = useState("");
@@ -224,6 +225,7 @@ const CheckOutForm = () => {
         </form>
       )}
     </>
-  );
-};
+  )
+}
+
 export default CheckOutForm;

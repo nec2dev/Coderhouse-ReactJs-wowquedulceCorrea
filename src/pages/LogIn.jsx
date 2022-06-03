@@ -1,4 +1,5 @@
-import LogInForm from '../components/Forms/LogInForm';
+import React from 'react'
+import LogInForm from '../components/Forms/LogInForm'
 
 const LogIn = () => {
   return (
@@ -6,5 +7,6 @@ const LogIn = () => {
       <LogInForm />
     </main>
   )
-};
-export default LogIn;
+}
+
+export default LogIn

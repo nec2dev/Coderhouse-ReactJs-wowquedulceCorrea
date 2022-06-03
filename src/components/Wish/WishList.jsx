@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { CartContext } from '../Cart/CartContext';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { WishContext } from './WishContext'
 
 const WishList = () => {
-    const { wishList, wishCounter, removeItemWishList, emptyWishList, totalBuy } = useContext(CartContext)
+    const { wishList, wishCounter, removeItemWishList, emptyWishList, totalBuy } = useContext(WishContext)
     return (
         <div >
             <div>

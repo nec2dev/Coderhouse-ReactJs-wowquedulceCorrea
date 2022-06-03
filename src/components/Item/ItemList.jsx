@@ -1,7 +1,8 @@
-import { memo } from 'react';
-import BoxNavBar from '../NavBar/BoxNavBar';
-import Item from './Item';
-import ItemsFilters from './ItemsFilters';
+import React from 'react'
+import { memo } from 'react'
+import BoxNavBar from '../NavBar/NavBarBox'
+import Item from './Item'
+import ItemsFilters from './ItemsFilters'
 
 const ItemList = memo(({ products }) => {
   return (
@@ -18,8 +19,8 @@ const ItemList = memo(({ products }) => {
         </div>
       </div>
     </>
-  );
+  )
 }
 )
 
-export default ItemList;
+export default ItemList

@@ -1,7 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
-import Box from "../../assets/img/box.png";
-import Event from "../../assets/img/eventos.png";
-import Breadcrumb from "./Breadcrumb";
+import React from 'react'
+import { Link, NavLink } from "react-router-dom"
+import Box from "../../assets/img/box.png"
+import Event from "../../assets/img/eventos.png"
+import Breadcrumbs from "./Breadcrumbs"
 
 const NavBar = () => {
   return (
@@ -30,7 +31,7 @@ const NavBar = () => {
                 <img src={Event} className="w-5 h-5 object-contain" alt="" />
                 <span className="ml-6 text-gray-600 text-sm">Eventos</span>
               </NavLink>
-              {/* <Link to="/" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+              <Link to="/" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <img src="" className="w-5 h-5 object-contain" alt=""/>
                         <span className="ml-6 text-gray-600 text-sm">Box 003</span>
                     </Link>
@@ -42,10 +43,6 @@ const NavBar = () => {
                         <img src="" className="w-5 h-5 object-contain" alt=""/>
                         <span className="ml-6 text-gray-600 text-sm">Box 005</span>
                     </Link>
-                    <Link to="/" className="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                        <img src="" className="w-5 h-5 object-contain" alt=""/>
-                        <span className="ml-6 text-gray-600 text-sm">Box 006</span>
-                    </Link> */}
             </div>
           </div>
           <div className="flex items-center justify-between flex-grow pl-12">
@@ -62,18 +59,6 @@ const NavBar = () => {
               >
                 Tienda
               </Link>
-              <Link
-                to="/nosotros"
-                className="text-gray-200 hover:text-white transmition"
-              >
-                Nosotros
-              </Link>
-              <Link
-                to="/contactos"
-                className="text-gray-200 hover:text-white transmition"
-              >
-                Contactos
-              </Link>
             </div>
             <a
               href="/iniciarsesion"
@@ -84,8 +69,9 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-      <Breadcrumb className="h-3"/>
+      <Breadcrumbs className="h-3"/>
     </>
-  );
-};
-export default NavBar;
+  )
+}
+
+export default NavBar

@@ -1,7 +1,7 @@
-import React from "react";
-import { useParams } from 'react-router-dom';
+import React from "react"
+import { useParams } from 'react-router-dom'
 
-const Breadcrumb = () => {
+const Breadcrumbs = () => {
   const { id } = useParams();
   return (
     <div className="container py-1 bg-white flex items-center">
@@ -13,6 +13,7 @@ const Breadcrumb = () => {
       </span>
       <p className="text-gray-600 font-medium">{id}</p>
     </div>
-  );
-};
-export default Breadcrumb;
+  )
+}
+
+export default Breadcrumbs

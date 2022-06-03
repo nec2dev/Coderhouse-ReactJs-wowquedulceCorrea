@@ -1,5 +1,6 @@
+import React from 'react'
 // import React, { useContext } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 // import { WishContext } from '../Context/WishContext';
 
 const WishWidget = () => {
@@ -15,6 +16,7 @@ const WishWidget = () => {
         0
         </span>
       </button>
-    );
-};
+    )
+}
+
 export default WishWidget

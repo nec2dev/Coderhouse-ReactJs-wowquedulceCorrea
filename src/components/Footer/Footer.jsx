@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Appstore from'../../assets/img/appstore.png';
-import Googleplay from'../../assets/img/googleplay.png';
-import Logonec from'../../assets/img/logonec.png';
-import Logocoder from'../../assets/img/coderhouse.png';
+import React from "react"
+import { Link } from "react-router-dom"
+import Appstore from'../../assets/img/appstore.png'
+import Googleplay from'../../assets/img/googleplay.png'
+import Logonec from'../../assets/img/logonec.png'
+import Logocoder from'../../assets/img/coderhouse.png'
 
 const Header = () => {
   return (
@@ -109,6 +109,6 @@ const Header = () => {
         <div className="inline-flex items-baseline mb-12">en contexto de la carrera de Desarrollo Fullstack de  <a className="text-white" href="https://coderhouse.com/"><img src={Logocoder} alt="logo coderhouse" className="w-20"/></a>. com:31860</div>
       </footer>
     </>
-  );
-};
-export default Header;
+  )
+}
+export default Header

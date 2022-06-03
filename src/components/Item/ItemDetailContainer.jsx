@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { doc, getDoc, getFirestore } from "firebase/firestore";
-import ItemDetail from "./ItemDetail";
-import LoadingSpinner from "../Item/LoadingSpinner";
+import React from 'react'
+import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
+import { doc, getDoc, getFirestore } from "firebase/firestore"
+import ItemDetail from "./ItemDetail"
+import LoadingSpinner from "../Animations/LoadingSpinner"
 
 function ItemDetailContainer() {
   const {idProduct} = useParams()
@@ -19,7 +20,7 @@ function ItemDetailContainer() {
     <div>
       {isLoading ? <LoadingSpinner /> : <ItemDetail product={product} />}
     </div>
-  );
+  )
 }
 
-export default ItemDetailContainer;
+export default ItemDetailContainer

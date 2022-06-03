@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const LoadingSpinner = () => {
   return (
     <>
-      <div className="container flex mx-auto">
+      <div className="container flex">
         <div className="flex justify-center items-center h-screen w-2/4">
           <svg
             role="status"

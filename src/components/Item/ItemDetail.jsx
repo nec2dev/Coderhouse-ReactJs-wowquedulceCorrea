@@ -1,12 +1,12 @@
-import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { CartContext } from '../Cart/CartContext';
-import ItemCount from '../Item/ItemCount';
-import BoxDetail001 from '../../assets/img/Wow007-001.png';
-import BoxDetail002 from '../../assets/img/Wow007-002.png';
-import BoxDetail003 from '../../assets/img/Wow007-003.png';
-import BoxDetail004 from '../../assets/img/Wow007-004.png';
-import BoxDetail005 from '../../assets/img/Wow007-005.png';
+import React, { useState, useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../Cart/CartContext'
+import ItemCount from './ItemCount'
+import BoxDetail001 from '../../assets/img/Wow007-001.png'
+import BoxDetail002 from '../../assets/img/Wow007-002.png'
+import BoxDetail003 from '../../assets/img/Wow007-003.png'
+import BoxDetail004 from '../../assets/img/Wow007-004.png'
+import BoxDetail005 from '../../assets/img/Wow007-005.png'
 
 function ItemDetail({ product }) {
     const [goToCart, setGoToCart] = useState(false)
@@ -125,21 +125,6 @@ function ItemDetail({ product }) {
                             <i className="fa-solid fa-basket-shopping"></i>Seguir comprando
                         </Link>
                     </div>
-                    {/* <div className="mt-4">
-                        <h3 className="text-sm text-gray-800 uppercase mb-1">Cantidad</h3>
-                        <ItemCount initial={1} stock={product.stock} onAdd={onAdd} />
-                    </div>
-                    <div className="flex gap-3 mt-4">
-                        <Link to="#!" className="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
-                            <i className="fab fa-facebook-f"></i>
-                        </Link>
-                        <Link to="#!" className="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
-                            <i className="fab fa-twitter"></i>
-                        </Link>
-                        <Link to="#!" className="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
-                            <i className="fab fa-instagram"></i>
-                        </Link>
-                    </div> */}
                 </div>
             </div>
             <div>
@@ -169,6 +154,7 @@ function ItemDetail({ product }) {
                 </div>
             </div>
         </>
-    );
-};
-export default ItemDetail;
+    )
+}
+
+export default ItemDetail

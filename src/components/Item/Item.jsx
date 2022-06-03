@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import ItemCount from '../Item/ItemCount';
-import { CartContext } from '../Cart/CartContext';
+import React, { useState, useContext } from 'react'
+import { Link } from 'react-router-dom'
+import ItemCount from '../Item/ItemCount'
+import { CartContext } from '../Cart/CartContext'
 // import { WishContext } from '../Context/WishContext';
 
 function Item({ prod }) {
@@ -71,6 +71,7 @@ function Item({ prod }) {
         </div>
       </div>
     </>
-  );
-};
-export default Item;
+  )
+}
+
+export default Item
