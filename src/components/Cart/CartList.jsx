@@ -45,10 +45,10 @@ const CartList = () => {
                                 <p className="font-semibold">Total</p>
                                 <p>$ {totalBuy()}</p>
                             </div>
-                            <div>
-                                <button onClick={emptyCart} className="w-full block text-center bg-primary border border-primary text-white px-4 py-3 font-medium rounded-md hover:bg-transparent hover:text-primary">Vaciar Carrito</button>
+                            <div className="flex gap-3 pb-1 mt-5">
+                                <button onClick={emptyCart} className="w-50 block text-center bg-terciary border border-terciary text-white px-4 py-3 font-medium rounded-md hover:bg-transparent hover:text-primary">Vaciar Carrito</button>
                                 <Link to="/compra">
-                                    <button className="w-full block text-center bg-primary border border-primary text-white px-4 py-3 font-medium rounded-md hover:bg-transparent hover:text-primary">Procesar Compra</button>
+                                    <button className="w-50 block text-center bg-primary border border-primary text-white px-4 py-3 font-medium rounded-md hover:bg-transparent hover:text-primary">Procesar Compra</button>
                                 </Link>
                             </div>
                             <Link to="/tienda" className="flex font-semibold text-primary text-sm mt-10">

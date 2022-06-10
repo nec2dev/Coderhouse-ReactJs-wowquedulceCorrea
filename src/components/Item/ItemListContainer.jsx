@@ -26,7 +26,7 @@ function ItemListContainer() {
 
   return (
     <>
-      {isLoading ? <LoadingSpinner className="container flex mx-auto"/> : <ItemList products={products} />}
+      {isLoading ? <LoadingSpinner /> : <ItemList products={products} />}
     </>
   )
 }

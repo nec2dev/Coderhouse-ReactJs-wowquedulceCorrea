@@ -1,33 +1,45 @@
-import React, { useState, useContext } from 'react'
-import { Link } from 'react-router-dom'
-import ItemCount from '../Item/ItemCount'
-import { CartContext } from '../Cart/CartContext'
-// import { WishContext } from '../Context/WishContext';
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import ItemCount from "./ItemCount";
+import ItemCountWish from "./ItemCountWish";
+import { CartContext } from "../Cart/CartContext";
+import { WishContext } from "../Wish/WishContext";
 
 function Item({ prod }) {
-  const [goToCart, setGoToCart] = useState(false)
-  // const [goToWishList, setGoWishList] = useState(false)
-  const { addToCart } = useContext(CartContext)
-  // const { addToWishList } = useContext(WishContext)
+  const [goToCart, setGoToCart] = useState(false);
+  const [goToWish, setGoToWish] = useState(false);
+  const { addToCart } = useContext(CartContext);
+  const { addToWish } = useContext(WishContext);
   const onAdd = (quantity) => {
-    setGoToCart(true)
-    addToCart({ ...prod, quantity: quantity })
-  }
-  // const onAddWish = (quantity) => {
-  //   setGoWishList(true)
-  //   addToWishList({ ...prod, quantity: quantity })
-  // }
+    setGoToCart(true);
+    addToCart({ ...prod, quantity: quantity });
+  };
+  const onAddWish = (quantity) => {
+    setGoToWish(true);
+    addToWish({ ...prod, quantity: quantity });
+  };
   return (
     <>
       <div className="bg-white shadow rounded-lg overflow-hidden group p-1 ">
         <div className="relative">
-          <img src={prod.imagen} alt={prod.nombre} className="rounded-lg w-full" />
-          <div className='absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition'>
-            <i className='fas fa-heart text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-400 transition'></i>
-            <Link to={`/producto/${prod.id}`} className='fas fa-search text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-400 transition'>
-            </Link>
-            <div className="uppercase font-medium text-xl text-center mb-2 text-gray-800 hover:text-primary transition">
+          <img
+            src={prod.imagen}
+            alt={prod.nombre}
+            className="rounded-lg w-full"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+            <div>
+              <ItemCountWish
+                initialWish={1}
+                stockWish={prod.stock}
+                onAddWish={onAddWish}
+              />
             </div>
+            <Link
+              to={`/producto/${prod.id}`}
+              className="fas fa-search text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-400 transition"
+            ></Link>
+            <div className="uppercase font-medium text-xl text-center mb-2 text-gray-800 hover:text-primary transition"></div>
           </div>
         </div>
         <h4>{prod.nombre}</h4>
@@ -51,27 +63,39 @@ function Item({ prod }) {
           </div>
           <div className="text-xs text-gray-500 ml-3">(150)</div>
         </div>
-        <p className="text-xl text-primary font-semibold text-center">${prod.precio.toFixed(2)}</p>
-        <p className="text-sm text-gray-400 line-through text-center">${prod.precioAnterior.toFixed(2)}</p>
+        <p className="text-xl text-primary font-semibold text-center">
+          ${prod.precio.toFixed(2)}
+        </p>
+        <p className="text-sm text-gray-400 line-through text-center">
+          ${prod.precioAnterior.toFixed(2)}
+        </p>
         <div>Medidas: {prod.medidas}</div>
         <div>N° de piezas: {prod.numpiezas} un.</div>
         <div>Peso: {prod.peso} Kg.</div>
         <div className="mt-4">
           <h3 className="text-sm text-gray-800 uppercase mb-1">Cantidad</h3>
-          {!goToCart ? <ItemCount initial={1} stock={prod.stock} onAdd={onAdd} /> :
+          {!goToCart ? (
+            <ItemCount initial={1} stock={prod.stock} onAdd={onAdd} />
+          ) : (
             <div>
-              <Link to="/carrito" className="bg-green-400 border border-green-400 text-white px-8 py-2 mb-3 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-green-400 transition">
+              <Link
+                to="/carrito"
+                className="bg-green-400 border border-green-400 text-white px-8 py-2 mb-3 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-green-400 transition"
+              >
                 Agregado, Gracias!
               </Link>
-              <Link to="/carrito" className="bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition">
+              <Link
+                to="/carrito"
+                className="bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition"
+              >
                 <i className="fas fa-shopping-cart"></i>Ir al Carrito
               </Link>
             </div>
-          }
+          )}
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Item
+export default Item;

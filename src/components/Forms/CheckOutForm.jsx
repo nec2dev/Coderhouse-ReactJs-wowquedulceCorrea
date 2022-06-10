@@ -59,7 +59,6 @@ const CheckOutForm = () => {
     <>
       {creatingOrder ? (
         <>
-          <h4>Procesando su orden, espere un momento...</h4>
           <LoadingSpinner />
         </>
       ) : orderId ? (

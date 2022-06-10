@@ -1,8 +1,8 @@
 import React from 'react'
 import CartWidget from "./CartWidget"
+import WishWidget from "./WishWidget"
 import HeadLogo from "./Headlogo"
 import { Link } from "react-router-dom"
-import WishWidget from "./WishWidget"
 
 const Header = () => {
     return (
