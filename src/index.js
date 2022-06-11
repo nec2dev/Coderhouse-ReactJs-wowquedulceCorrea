@@ -6,12 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_APIKEY,
-    authDomain: process.env.REACT_APP_AUTHDOMAIN,
-    projectId: process.env.REACT_APP_PROJECTID,
-    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-    appId: process.env.REACT_APP_APPID
+    APIKEY: process.env.REACT_APP_APIKEY,
+    AUTHDOMAIN: process.env.REACT_APP_AUTHDOMAIN,
+    REACT_APP_PROJECTID: process.env.REACT_APP_PROJECTID,
+    REACT_APP_STORAGEBUCKET: process.env.REACT_APP_STORAGEBUCKET,
+    MESSAGINGSENDERID: process.env.REACT_APP_MESSAGINGSENDERID,
+    APPID: process.env.REACT_APP_APPID
 };
 const app = initializeApp(firebaseConfig);
 export const getFireStoreApp = () => {
