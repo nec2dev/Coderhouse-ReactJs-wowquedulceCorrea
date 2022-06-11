@@ -12,7 +12,7 @@ import BoxDetail005 from "../../assets/img/Wow007-005.png";
 
 function ItemDetail({ product }) {
   const [goToCart, setGoToCart] = useState(false);
-  const [goToWish, setGoToWish] = useState(false);
+  const [setGoToWish] = useState(false);
   const { addToCart } = useContext(CartContext);
   const { addToWish } = useContext(WishContext);
   const onAdd = (quantity) => {

@@ -2,17 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ItemCountWish = ({ initialWish, stockWish, onAddWish }) => {
-  const [countWish, setCountWish] = useState(initialWish);
-  const handleSubstractWish = () => {
-    if (countWish > initialWish) {
-      setCountWish((counterWish) => counterWish - 1);
-    }
-  };
-  const handleAddWish = () => {
-    if (countWish < stockWish) {
-      setCountWish((counterWish) => counterWish + 1);
-    }
-  };
+  const [countWish] = useState(initialWish);
   return (
     <div>
       <Link to="#" onClick={() => onAddWish(countWish)} className="text-xl flex items-center justify-center cursor-pointer select-none">

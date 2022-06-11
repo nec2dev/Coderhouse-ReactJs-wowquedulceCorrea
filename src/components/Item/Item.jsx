@@ -7,7 +7,7 @@ import { WishContext } from "../Wish/WishContext";
 
 function Item({ prod }) {
   const [goToCart, setGoToCart] = useState(false);
-  const [goToWish, setGoToWish] = useState(false);
+  const [setGoToWish] = useState(false);
   const { addToCart } = useContext(CartContext);
   const { addToWish } = useContext(WishContext);
   const onAdd = (quantity) => {
